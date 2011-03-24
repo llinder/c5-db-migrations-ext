@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.dtornkaew.db.support.ext</groupId>
+	<artifactId>db-support-ext-parent</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<packaging>pom</packaging>
+
+	<name>Database Support Extensions (Parent)</name>
+
+	<ciManagement>
+		<system>Hudson</system>
+		<url>${cimanagement.url}</url>
+	</ciManagement>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/llinder/db-support-extensions/issues</url>
+	</issueManagement>
+
+	<properties>
+		<spring.version>3.0.5.RELEASE</spring.version>
+		<c5.db-support.version>0.9.9-m5</c5.db-support.version>
+
+		<scm.connection>scm:git:git://github.com/llinder/db-support-extensions.git</scm.connection>
+		<scm.developerConnection>scm:git:git@github.com:llinder/db-support-extensions.git</scm.developerConnection>
+		<scm.url>https://github.com/llinder/db-support-extensions</scm.url>
+	</properties>
+
+	<build>
+		<pluginManagement>
+		</pluginManagement>
+	</build>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<!-- C5 Migrations -->
+			<dependency>
+				<groupId>com.carbonfive.db-support</groupId>
+				<artifactId>db-migration</artifactId>
+				<version>${c5.db-support.version}</version>
+			</dependency>
+
+			<!-- Spring -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+				<optional>true</optional>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-jdk14</artifactId>
+				<version>1.5.8</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- Test Support -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.8.2</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-core</artifactId>
+				<version>1.8.5</version>
+				<scope>test</scope>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<scm>
+		<connection>${scm.connection}</connection>
+		<developerConnection>${scm.developerConnection}</developerConnection>
+		<url>${scm.url}</url>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>${repo.release.id}</id>
+			<name>Internal Releases</name>
+			<url>${repo.release.url}</url>
+		</repository>
+		<snapshotRepository>
+			<id>${repo.snapshot.id}</id>
+			<name>Internal Snapshots</name>
+			<url>${repo.snapshot.url}</url>
+		</snapshotRepository>
+		<site>
+			<id>${site.id}</id>
+			<name>Documentation</name>
+			<url>${site.url}</url>
+		</site>
+	</distributionManagement>
+
+</project>
