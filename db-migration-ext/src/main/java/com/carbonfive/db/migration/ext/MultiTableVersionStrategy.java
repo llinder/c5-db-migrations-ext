@@ -1,4 +1,4 @@
-package com.dtornkaew.db.migration;
+package com.carbonfive.db.migration.ext;
 
 import static com.carbonfive.db.jdbc.DatabaseType.HSQL;
 import static com.carbonfive.db.jdbc.DatabaseType.SQL_SERVER;
@@ -62,7 +62,7 @@ public class MultiTableVersionStrategy
     {
         try
         {
-            connection.createStatement().executeQuery( "select count(*) from " + versionTable );
+            connection.createStatement().executeQuery( "select count(*) from " + getVersionTable() );
         }
         catch ( SQLException e )
         {
@@ -83,7 +83,7 @@ public class MultiTableVersionStrategy
         }
         catch ( SQLException e )
         {
-            throw new MigrationException( "Could not create version-tracking table '" + versionTable + "'.", e );
+            throw new MigrationException( "Could not create version-tracking table '" + getVersionTable() + "'.", e );
         }
     }
 

@@ -1,4 +1,4 @@
-package com.dtornkaew.db.migration;
+package com.carbonfive.db.migration.ext;
 
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
@@ -18,9 +18,9 @@ public class MigrationManagerFactory
 {
     private static final String DEFAULT_MANAGE = "com.carbonfive.db.migration.DataSourceMigrationManager";
 
-    private static final String DEFAULT_RESOLVER = "com.dtornkaew.db.migration.DbAwareResourceMigrationResolver";
+    private static final String DEFAULT_RESOLVER = "com.carbonfive.db.migration.ext.DbAwareResourceMigrationResolver";
 
-    private static final String DEFAULT_VERSION_STRATEGY = "com.dtornkaew.db.migration.MultiTableVersionStrategy";
+    private static final String DEFAULT_VERSION_STRATEGY = "com.carbonfive.db.migration.ext.MultiTableVersionStrategy";
 
     private DataSource dataSource;
 

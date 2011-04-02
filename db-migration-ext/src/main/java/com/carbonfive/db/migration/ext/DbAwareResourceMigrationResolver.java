@@ -1,4 +1,4 @@
-package com.dtornkaew.db.migration;
+package com.carbonfive.db.migration.ext;
 
 import org.apache.commons.lang.StringUtils;
 

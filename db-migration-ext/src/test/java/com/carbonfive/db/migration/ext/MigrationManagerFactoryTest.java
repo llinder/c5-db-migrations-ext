@@ -1,4 +1,4 @@
-package com.dtornkaew.db.migration;
+package com.carbonfive.db.migration.ext;
 
 import static org.mockito.Mockito.*;
 import static org.junit.Assert.*;
@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.carbonfive.db.migration.MigrationManager;
+import com.carbonfive.db.migration.ext.MigrationManagerFactory;
 
 public class MigrationManagerFactoryTest
 {

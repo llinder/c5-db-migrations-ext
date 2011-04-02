@@ -1,4 +1,4 @@
-package com.dtornkaew.db.migration;
+package com.carbonfive.db.migration.ext;
 
 public class MigrationConfiguration
 {

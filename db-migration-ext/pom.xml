@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.dtornkaew.db.support.ext</groupId>
+		<groupId>com.carbon5.db-support</groupId>
 		<artifactId>db-support-ext-parent</artifactId>
 		<version>1.0-SNAPSHOT</version>
 		<relativePath>../db-support-ext-parent/pom.xml</relativePath>
