@@ -4,7 +4,7 @@
 
 	<groupId>com.carbon5.db-support</groupId>
 	<artifactId>db-support-ext-parent</artifactId>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
 
